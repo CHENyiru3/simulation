@@ -37,9 +37,9 @@ warnings.filterwarnings('ignore')
 
 
 # import from other modules
-from .var_mean_sim import simulate_gene_average_expression, simulate_gene_variances_advanced
-from .simulator_generation import simulator_remain_simulate_count
-from .simulator_fit import fit_marginal_model_with_simulated_params
+from var_mean_sim import simulate_gene_average_expression, simulate_gene_variances_advanced
+from simulator_generation import simulator_remain_simulate_count
+from simulator_fit import fit_marginal_model_with_simulated_params
 
 
 class SimulatorSRT:
@@ -109,3 +109,8 @@ def simulation_slice(adata):
     return simulated_adata
 
 
+# test
+adata = sc.read_h5ad('/Users/chen_yiru/Desktop/simulation/data/raw/Sample_data_151676.h5ad')
+print(adata)
+simulated_adata = simulation_slice(adata)
+print(simulated_adata)
