@@ -5,24 +5,14 @@ import anndata
 
 from scipy import sparse as sp
 from scipy import stats
-from scipy.stats import (
-    genpareto, 
-    ks_2samp, 
-    nbinom, 
-    poisson, 
-    bernoulli, 
-    invgamma
-)
+
 from scipy.optimize import minimize, minimize_scalar
-from scipy.spatial.distance import cdist
-from scipy.special import gammaln
+
 
 
 import anndata as ad
 import scanpy as sc
 
-
-from multiprocessing import Pool
 from joblib import Parallel, delayed
 
 
