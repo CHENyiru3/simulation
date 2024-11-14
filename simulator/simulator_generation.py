@@ -85,7 +85,7 @@ def simulate_gene(iter, gene_names, adata, model_params, rr):
         except Exception as e:
             print(f"Warning: Error simulating gene {gene_name} with {model_type} model: {e}")
             print("Falling back to Poisson distribution with mean as lambda")
-            # 使用原始数据的平均值作为 Poisson 分布的参数
+
             mean_expr = np.mean(gene_expr)
             sim_raw_expr = poisson.rvs(mean_expr, size=adata.shape[0])
         

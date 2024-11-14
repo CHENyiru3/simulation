@@ -34,7 +34,7 @@ import seaborn as sns
 # 忽略警告
 import warnings
 warnings.filterwarnings('ignore')
-
+import pickle
 
 # import from other modules
 from var_mean_sim import simulate_gene_average_expression, simulate_gene_variances_advanced
@@ -79,6 +79,11 @@ def run_simulation_tissue(adata):
         'variance': var_evaluation,
 
     }
+
+    with open('/Users/chen_yiru/Desktop/simulation/data/151676_model.pkl', 'wb') as f:
+        pickle.dump(model_params, f)
+    
+    return model_params
 
     return model_params
 def simulation_slice(adata):
