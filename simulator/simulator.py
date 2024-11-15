@@ -80,7 +80,7 @@ def run_simulation_tissue(adata):
 
     }
 
-    with open('/Users/chen_yiru/Desktop/simulation/data/151676_model.pkl', 'wb') as f:
+    with open('/Users/chen_yiru/Desktop/simulation/simulation/data/151675_model.pkl', 'wb') as f:
         pickle.dump(model_params, f)
     
     return model_params
@@ -115,7 +115,7 @@ def simulation_slice(adata):
 
 
 # test
-adata = sc.read_h5ad('/Users/chen_yiru/Desktop/simulation/data/raw/Sample_data_151676.h5ad')
+adata = sc.read_h5ad('/Users/chen_yiru/Desktop/simulation/data/raw/Sample_data_151675.h5ad')
 print(adata)
 simulated_adata = simulation_slice(adata)
 print(simulated_adata)
