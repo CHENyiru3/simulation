@@ -85,7 +85,7 @@ def run_simulation_tissue(adata):
     
     return model_params
 
-    return model_params
+
 def simulation_slice(adata):
     model_params = run_simulation_tissue(adata)
     simulator = SimulatorSRT(adata, model_params)
